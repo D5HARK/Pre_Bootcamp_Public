@@ -4,16 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div id = "heading"></div>
+    <div id = "heading">
         <h1>Get out and play!</h1>
+        <div>    
+            <button class = "blue_buttons">Home</button>
+            <button class = "blue_buttons">Login</button>
+            <a href="#sign_up">
+                <button class = "blue_buttons">Signup</button>
+            </a>
+        </div>
     </div>
-    <div>    
-        <button class = "blue_buttons">Home</button>
-        <button class = "blue_buttons">Login</button>
-        <button class = "blue_buttons">Signup</button>
+
+    <div id="container">
+        <div id="box"></div>
     </div>
+    <h2>Where to play</h2>
+    <div id="articles">
+        <div>
+            <h3>Europe</h3>
+            <h4>Portugal</h4>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+            <h4>Spain</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+            <h4>Sweden</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+        </div>
+        <div>
+            <h3>South America</h3>
+            <h4>Peru</h4>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+            <h4>Bolivia</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+            <h4>Argentina</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vitae illo saepe quisquam veritatis repellat? 
+                Porro quam molestiae alias voluptate minus enim, 
+                officia facilis quis beatae repellat temporibus animi delectus.</p>
+        </div>
+    </div>
+    <form id = "sign_up">
+        <h3>Sign Up!</h3>
+        <label>
+            Name:
+            <input type="text">
+        </label>
+        <label>
+            Password:
+            <input type="password">
+        </label>
+        <input type="submit" value="Create User">
+    </form>
 </body>
 </html>

@@ -1,8 +1,63 @@
 #heading {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    background-color: blanchedalmond;
+    padding: 20px;
 }
 
 .blue_buttons {
     background-color: blue;
     color: white
 }
+#container {
+    background-color: blue;
+    padding: 15px;
+}
+
+#box {
+    background-color: rgb(0, 0, 0);
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(182, 25, 182);
+    margin-left: 200px;
+    padding: 15px;
+}
+#articles {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+h2, h3 {
+text-align: center;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin: 12px;
+}
+form {
+    border: 2px solid rgb(0, 0, 0);
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    /*margin: y-axis x-axis */
+    /*margin: top right bottom lecft*/
+
+}
+form h3 {
+    display: inline-block;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    margin-top: -20px;
+    background-color: white;
+}
+
+
