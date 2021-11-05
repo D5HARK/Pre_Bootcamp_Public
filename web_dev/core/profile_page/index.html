@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>profile_page</title>
+</head>
+<body>
+    <div id="top_bar">
+        <h1 id="profile">Profile</h1>
+        <a href="link"class="top_bar_text">Home</a>
+        <a href="link"class="top_bar_text">My Profile</a>
+        <a href="link"class="top_bar_text">Find Connections</a>
+        <a href="link" id="sign_out_button"> Sign Out</a>  
+    </div>
+    <div id="container">
+        <div id="left_block">
+            <div id="profile_display">
+                <div id="profile_display_top_graphic"></div>
+                <div id="profile_picture"> <img src="jane-m.jpg" alt="jane_doe"></div>
+                <div><h2 id="name">Jane Doe</h2></div>
+                <div id="location_block"><img src="map-marker.png" alt="map_marker" id="location_symbol">
+                <h3 id="location">Seattle</h3></div>
+                <div id="titles">Developer | Engineer | Problem Solver</div>
+                <div id="description"> Master of Shadows and the Internet!</div>
+                <div><a href="link"><img src="gear.png" alt="setting_gear" id="setting_gear"></a><a href="link" id="edit_text">edit profile</a></div>
+            </div>
+            <div id="education_block">
+                <div><h2 id="education_header" class="block_header">Education</h2></div>
+                <div id="dojo"><h3>Coding Dojo - Full Stack Bootcamp</h3></div>
+                <div id="dates"><h4>Dec 2019 - Mar 2020</h4></div>
+                <div id="content">Triple black belt in Python, MERN, and C#...</div>
+            </div>
+        </div>
+        
+        <div id="right_block">
+            <div id="connection_requests">
+                <!-- need to add number in circle -->
+                <div><h2 id="connection_requests_header" class="block_header">Connection Requests</h2></div>
+                <div id="connection_request_preview">
+                    <div class="request"><img src="todd-s.jpg" alt="todd_s" class="request_picture">Todd E 
+                        <img src="accept-circle.png" alt="acccept" class="accept"><img src="close-circle.png" alt="decline" class="decline"></div>
+                    <div class="request"><img src="phil-s.jpg" alt="phil_k" class="request_picture">Phil k 
+                        <img src="accept-circle.png" alt="acccept" class="accept"><img src="close-circle.png" alt="decline" class="decline"></div>
+                </div>
+            </div>
+            <div id="your_connections">
+                <!-- needs number in circle -->
+                <div><h2 id="your_connections_header" class="block_header"> Your Connections</h2></div>
+                <div id="your_connections_preview">
+                    <div><img src="adrien-s.jpg" alt="phil_k" class="preview_picture">Adreien D </div>
+                    <div><img src="anne-s.jpg" alt="phil_k" class="preview_picture">Anne J </div>
+                    <div><img src="alayne-s.jpg" alt="phil_k" class="preview_picture">Alayne T </div>
+                    <div><img src="arry-s.jpg" alt="phil_k" class="preview_picture">Arry Y </div>
+                </div>
+                <div id="view_more_box"><a href="link">View More</a></div>   
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

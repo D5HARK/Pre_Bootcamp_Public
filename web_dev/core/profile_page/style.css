@@ -1,0 +1,252 @@
+#top_bar {
+    width: auto;
+    height: 8%;
+    background-color: black;
+    padding: 10px;
+    padding-right: 350px;
+    padding-left: 350px;
+    
+    
+}
+
+#container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#profile{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 55px;
+    margin-right: 60px;
+    font-family: cursive;
+
+}
+
+.top_bar_text{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    font-family: cursive;
+    
+
+}
+#sign_out_button{
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: cyan;
+    padding: 5px;
+    margin-left: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: cursive;
+    
+}
+
+#container {
+    width: auto;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-top: 50px;
+    font-family: cursive;
+}
+
+#profile_display{
+    padding: 50px;
+    width: 70%;
+    border: 5px solid gray;
+    display: inline-block; 
+
+}
+
+#profile_display_top_graphic {
+    background-color: cyan;
+    width: auto;
+    height: 125px;
+    margin-top: -55px;
+    margin-right: -55px;
+    margin-left: -55px;
+}
+
+#profile_picture img {
+    border-radius: 50%;
+    margin-top: -75px;
+    height: 150px;
+    border: 5px solid white;
+}
+ #name{
+     font-size: 50px;
+     margin-top: -10px;
+     margin-left: 10px; 
+     margin-bottom: -10px;  
+}
+
+ #location_block{
+     padding: 5px;
+}
+
+ #location_symbol {
+     height: 30px;
+     margin: 10px;
+     display: inline-block;
+     margin-right: 20px;
+}
+ #location{
+     display: inline-block;
+     font-size: 30px;
+     margin-top:5px;
+     vertical-align: top;
+     
+}
+
+#titles{
+    font-size: 20px;   
+}
+
+#description {
+    font-size: 20px;  
+}
+
+#setting_gear{
+    height: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    ;
+}
+
+
+#edit_text{
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#education_block{
+    margin-top: 30px;
+    padding: 50px;
+    width: 70%;
+    border: 5px solid gray;
+
+}
+
+#education_header{
+    background-color: rgb(44, 44, 44);
+    width: auto;
+    height: 60px;
+    margin-top: -55px;
+    margin-right: -55px;
+    margin-left: -55px;
+    color: white;
+    padding-left:50px ;
+    padding-top: 20px;
+}
+
+#dojo{
+    font-size: 20px;
+    margin-top: -15px;
+}
+
+#dates{
+    font-size: 15px;
+    color: rgb(153, 152, 152);
+    margin-top: -15px;
+}
+
+#content{
+    font-size: 17px;
+}
+
+
+
+
+#connection_requests{
+    width: 100%;
+    margin-top: 30px;
+    border: 5px solid gray;
+    display: inline-block;
+    vertical-align: center;
+    padding-bottom: 10px;
+}
+
+#connection_requests_header{
+    background-color: rgb(44, 44, 44);
+    width: auto;
+    height: 60px;
+    color: white;
+    padding-left:50px ;
+    padding-top: 20px;
+    margin-top: -5px;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.preview_picture, .request_picture{
+    border-radius: 50%;
+    margin-top: -75px;
+    height: 80px;
+    margin: 0;
+}
+
+#connection_request_preview{
+    font-size: 40px;
+    
+
+    
+}
+
+.accept, .decline{
+    height: 40px;
+    
+}
+
+#right_block{
+    width: 30%;
+    margin-top: -30px;
+}
+
+
+#left_block{
+    width: 70%;
+}
+
+.request, .request_picture{
+    display: inline-block;
+}
+
+#your_connections {
+    width: 100%;
+    margin-top: 30px;
+    border: 5px solid gray;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#your_connections_header{
+    background-color: rgb(44, 44, 44);
+    width: auto;
+    height: 60px;
+    color: white;
+    padding-left:50px ;
+    padding-top: 20px;
+    margin-top: -5px;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+#your_connections_preview{
+    font-size: 35px;
+}
+
+#view_more_box{
+  width: auto;
+  height: auto;
+  margin-bottom: -13px;
+  border: 5px solid gray;
+}
