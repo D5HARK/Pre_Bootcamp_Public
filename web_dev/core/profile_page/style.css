@@ -180,12 +180,30 @@
     background-color: rgb(44, 44, 44);
     width: auto;
     height: 60px;
-    color: white;
     padding-left:50px ;
     padding-top: 20px;
     margin-top: -5px;
     margin-right: -5px;
     margin-left: -5px;
+    
+
+    
+}
+
+#connection_requests_number{
+    border-radius: 100%;
+    background-color: lightgray;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: -40px;
+    margin-right: 10px;
+    
+}
+
+#connection_requests_text{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
 }
 
 .preview_picture, .request_picture{
@@ -193,10 +211,11 @@
     margin-top: -75px;
     height: 80px;
     margin: 0;
+    margin-right: 10px;
 }
 
 #connection_request_preview{
-    font-size: 40px;
+    font-size: 25px;
     
 
     
@@ -229,21 +248,41 @@
     border: 5px solid gray;
     display: inline-block;
     padding-bottom: 10px;
+    
+}
+
+#your_connections_number{
+    border-radius: 100%;
+    background-color: lightgray;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: -40px;
+    margin-right: 10px;
+    
+}
+
+#your_connections_text{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
 }
 
 #your_connections_header{
     background-color: rgb(44, 44, 44);
     width: auto;
     height: 60px;
-    color: white;
     padding-left:50px ;
     padding-top: 20px;
     margin-top: -5px;
     margin-right: -5px;
     margin-left: -5px;
 }
+
+
+
 #your_connections_preview{
-    font-size: 35px;
+    font-size: 25px;
+    padding: 20px;
 }
 
 #view_more_box{
