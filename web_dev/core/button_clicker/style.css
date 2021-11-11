@@ -1,0 +1,62 @@
+#container {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#page_header{
+    height: fit-content;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+#header_text{
+    font-size: 55px;
+}
+
+#search_bar{
+    height: 40px;
+    width: 40%;
+    font-size: 30px;
+}
+#login_button {
+    /* fix border and background of button*/
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    border: 10px rgb(255, 61, 93);
+    padding: 5px;
+    font-size: 30px;
+}
+#right_side, #left_side{
+    display: inline-block;
+}
+#left_side{
+    width: 69%;
+    /* nice */
+}
+#right_side{
+    /* fix right side alignment */
+    vertical-align: top;
+    width: 30%;    
+}
+.def_box, #right_box{
+    border: solid 2px black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+.left_def_box, .right_def_box{
+    display: inline-block;
+    margin: 15px;
+}
+
+.def_head{
+    font-size: 35px;
+    vertical-align: top;
+}
+
+
+
+
