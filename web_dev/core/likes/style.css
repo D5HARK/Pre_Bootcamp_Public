@@ -1,13 +1,39 @@
 #content_container{
+    font-family: sans-serif;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 .post_box{
     border: 3px solid black;
-    width: auto;
+    width: fit-content;
     padding: 20px;
+    
 }
 
+.like_counter, .like_text{
+    display: inline-block;
+}
+
+.name{
+    margin-right: 80px;
+}
+.name, .like_container, .like_button{
+    display: inline-block;
+    padding: 10px;
+    margin-top: -20px;
+}
+
+.like_button{
+    background-color: yellow;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    font-size: 20px;
+    border: 3px solid black;
+    box-shadow:3px  3px black;
+    margin:auto;
+}
 
 
