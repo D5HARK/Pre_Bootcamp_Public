@@ -12,16 +12,17 @@
         <div id="page_header">
             <h1 id="header_text">Dojonary</h1>
             <input type="text" placeholder="Search" id="search_bar">
-            <div id="login_button" class="button">Login</div>
+            <button id="login_button" class="button" onclick="login_logout(this)">Login</button>
+            
         </div>
         <div id="page_container">
             <div id="left_side">
                 <div class="def_box">
                     <div class="left_def_box">
                         <h2 class="def_head">ninja</h2>
-                        <p class="part_pf_speech">noun</p>
+                        <p class="part_of_speech"><i>noun</i></p>
                         <p>Plural: <i>ninjas</i></p>
-                        <div id="like_button_one" class="like_button" class="button"> 13 likes</div>
+                        <div onclick="alert('Ninja was liked!')" id="like_button_one" class="like_button" class="button"> 13 likes</div>
                     </div>
                     <div class="right_def_box">
                         <p>A practitioner skilled in the Japanese art of ninjutsu</p>
@@ -32,9 +33,9 @@
                 <div class="def_box">
                     <div class="left_def_box">
                         <h2 class="def_head">ninja</h2>
-                        <p class="part_pf_speech">noun</p>
+                        <p class="part_of_speech"><i>noun</i></p>
                         <p>Plural: <i>ninjas</i></p>
-                        <div id="like_button_two" class="like_button" class="button">37 likes</div>
+                        <div id="like_button_two" onclick="alert('Ninja was liked!')" class="like_button" class="button">37 likes</div>
                     </div>
                     <div class="right_def_box">
                         <p class="definition">A programmer who breaks down problems with zen-like focus</p>
@@ -44,11 +45,11 @@
             <div id="right_side">
                 <div id="right_box">
                     <p>Dojonary is defined by <b>YOU</b></p>
-                    <div class="button" id="add_definition">Add Definition</div>
+                    <div class="button" onclick="remove_definition(this)" id="add_definition">Add Definition</div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script src="script.js" ></script>
 </body>
 </html>

@@ -23,7 +23,6 @@
     border: 3px solid black;
 }
 #login_button {
-    /* fix border and background of button*/
     background-color: blue;
     color: rgb(255, 255, 255);
     padding: 5px;
@@ -45,7 +44,6 @@
     
 }
 #right_side{
-    /* fix right side alignment */
     vertical-align: top;
     padding-left: 20px;
     width: 30%;
@@ -67,12 +65,19 @@
 
 .left_def_box{
     width: 15%;
+    text-align: center;
+    align-content: center;
     
+}
+
+.part_of_speech{
+    font-size: 25px;
+    margin-top: -20px;
 }
 .right_def_box{
     font-size: 40px;
     width: 50%;
-    margin-left: 30px;
+    margin-left: 15%;
 }
 .def_head{
     font-size: 50px;
@@ -91,6 +96,7 @@
     font-size: 25px;
     border: 3px solid black;
     box-shadow:3px  3px black;
+    margin:auto;
 }
 
 .button{
