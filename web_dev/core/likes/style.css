@@ -1,0 +1,13 @@
+#content_container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.post_box{
+    border: 3px solid black;
+    width: auto;
+    padding: 20px;
+}
+
+
+
