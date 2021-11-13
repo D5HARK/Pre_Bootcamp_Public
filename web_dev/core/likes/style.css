@@ -1,13 +1,41 @@
-#content_container{
-    font-family: sans-serif;
+#thicc_container{
     padding-left: 10%;
     padding-right: 10%;
+    font-family: sans-serif;
 }
+
+#thicc_containter{
+    text-align: center;
+}
+
+#header{
+    height: fit-content;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    padding: 15px;
+}
+
+#your_feed{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    
+}
+
+#content_container{
+    font-family: sans-serif;
+    display: flex;
+    
+    
+}
+
 
 .post_box{
     border: 3px solid black;
-    width: fit-content;
     padding: 20px;
+    margin: 10px;
     
 }
 
@@ -36,4 +64,29 @@
     margin:auto;
 }
 
+#right_side, #left_side{
+    display: inline-block;
+    
+}
+
+#left_side{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 20%;
+    
+}
+
+#left_side img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%
+}
+
+#right_side{
+    width: 80%;
+    margin-top: -10px;
+}
 

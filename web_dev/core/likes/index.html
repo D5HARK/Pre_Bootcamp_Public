@@ -8,17 +8,47 @@
     <title>likes</title>
 </head>
 <body>
-    <div id="content_container">
-        <div class="post_box">
-            <h2 class="name">Some User</h2>
-            <div class="like_container">
-                <p class="like_counter">3</p>
-                <p class="like_text">like(s)</p>
+    <div id="thicc_container">
+        <div id="header">Network</div>
+        <div id="your_feed">Your Feed</div>
+        <div id="content_container">
+            <div id="left_side">
+                <div id="profile_picture"><img src="image0 (1).jpeg" alt="jonkbonx"></div>
+                <a href="link">Add an avatar</a>
+                <h2 id="my_name">James Doe</h2>
             </div>
-            <button class="like_button" onclick="increase_like()">Like</button>
-            <p class="post_text">This is some filler, text it can say anything we like</p>
+            <div id="right_side">
+                <div class="post_box">
+                    <h2 class="name">Neil M</h2>
+                    <div class="like_container">
+                        <p class = "like_counter" id="like_counter_one">9</p>
+                        <p class="like_text">like(s)</p>
+                    </div>
+                    <button  id= "like_button" class="like_button" onclick="increase_like_one()">Like</button>
+                    <p class="post_text">I just set up this new discord bot, let me know what you all think. <a href="link">link</a></p>
+                </div>
+                <div class="post_box">
+                    <h2 class="name">Nichole K</h2>
+                    <div class="like_container">
+                        <p class = "like_counter" id="like_counter_two">12</p>
+                        <p class="like_text">like(s)</p>
+                    </div>
+                    <button id= "like_button" class="like_button" onclick="increase_like_two()">Like</button>
+                    <p class="post_text">Just finished my <a href="link">next comic</a>, check it out</p>
+                </div>
+                <div class="post_box">
+                    <h2 class="name">Jim R</h2>
+                    <div class="like_container">
+                        <p  class = "like_counter"id="like_counter_three">9</p>
+                        <p class="like_text">like(s)</p>
+                    </div>
+                    <button id= "like_button" class="like_button" onclick="increase_like_three()">Like</button>
+                    <p class="post_text">I can't stop listening to the <a href="link">new album</a>. Who else is liking it?</p>
+                </div>
+            </div>
+            
         </div>
     </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
