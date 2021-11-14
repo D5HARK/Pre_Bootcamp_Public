@@ -1,0 +1,50 @@
+#container{
+    display: flex;
+    justify-content: center;
+}
+#gray_box{
+    height: fit-content;
+    width: fit-content;
+    background-color: gray;
+    padding: 10px;
+}
+
+#green_box{
+    width: auto;
+    height: 80px;
+    background-color: green;
+}
+
+#blue_box{
+    width: 200px;
+    height: 250px;
+    background-color: blue;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#red_box{
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.yellow_box{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    display: inline-block;
+    margin: 5px;
+}
+
+#purple_box{
+    width: auto;
+    height: 80px;
+    background-color: purple;
+}
+
