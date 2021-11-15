@@ -15,14 +15,14 @@
             </div>
             
             <div id="header_button_box">
-                <div class="buton" id="join_button">Join</div>
+                <div class="buton" onclick="remove_definition(this)" id="join_button">Join</div>
                 <div class="button" id="login_button">Login</div>    
             </div> 
         </div>
         <div id="sub_header">
             <div id="search_bar_box">
                 <input type="text" placeholder="SEARCH" id="search_bar">
-                <div class="button" id="search_go"></div>
+                <button onclick= "search()" class="button" id="search_go">GO</button>
             </div>
             <div class="sweet_type_box">
                 <img src="cake.png" alt="Cake">
@@ -41,45 +41,53 @@
                 <p>Pie</p>
             </div>
         </div>
-        <div id="left_content_box">
-            <h2>Recipie of the Day</h2>
-            <div class="post_box">
-                <img src="orange-tart.jpg" alt="Orange Tea Jelly Tart">
-                <div class="post_tag_box">
-                    <p>Orange Tea Jelly Tart</p>
-                    <p>By: <a href="link">yuripiano</a></p>
-                    <div class="like_button_and_counter">
-                        <img src="heart.png" alt="like heart">
-                        <p>68</p>
-                    </div>
-                </div>    
+        <div id="content_box">
+            <div id="left_content_box">
+                <h2 id="recipe_day">Recipe of the Day</h2>
+                <div class="post_box">
+                    <img class="food_pic" src="orange-tart.jpg" alt="Orange Tea Jelly Tart">
+                    <div class="post_tag_box">
+                        <div class="author_box">
+                            <p class="food_name">Orange Tea Jelly Tart</p>
+                            <p class="author">By: <a href="link">yuripiano</a></p>
+                        </div>
+                        <div class="like_button_and_counter">
+                            <img class="like_heart" src="heart.png" alt="like heart" onclick="increase_like_one()">
+                            <p id="like_counter_one" class="counter">68</p>
+                        </div>
+                    </div>    
+                </div>
+                <a href="link">See Full Recipie</a>
             </div>
-            <a href="link">See Full Recipie</a>
-        </div>
-        <div id="right_content_box">
-            <h2>Recommended for you:</h2>
-            <div id="recommend_seperator"></div>
-            <div class="post_box">
-                <img src="macarons.jpg" alt="Macarons">
-                <div class="post_tag_box">
-                    <p>Macarons</p>
-                    <p>By: <a href="link">EmileW</a></p>
-                    <div class="like_button_and_counter">
-                        <img src="heart.png" alt="like heart">
-                        <p>212</p>
+            <div id="right_content_box">
+                <h2 id="recommend">Recommended for you:</h2>
+                <div id="recommend_seperator"></div>
+                <div class="post_box">
+                    <img class="food_pic" src="macarons.jpg" alt="Macarons">
+                    <div class="post_tag_box">
+                        <div class="author_box">
+                        <p class="food_name">Macarons</p>
+                        <p class="author">By: <a href="link">EmileW</a></p>
                     </div>
-                </div>    
-            </div>
-            <div class="post_box">
-                <img src="creme-brulee.jpg" alt="Creme Brulee">
-                <div class="post_tag_box">
-                    <p>Crème Brûlée</p>
-                    <p>By: <a href="link">MarisaG</a></p>
-                    <div class="like_button_and_counter">
-                        <img src="heart.png" alt="like heart">
-                        <p>32</p>
-                    </div>
-                </div>    
+                        <div class="like_button_and_counter">
+                            <img class="like_heart" src="heart.png" alt="like heart" onclick="increase_like_two()">
+                            <p id="like_counter_two" class="counter">212</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="post_box">
+                    <img class="food_pic" src="creme-brulee.jpg" alt="Creme Brulee">
+                    <div class="post_tag_box">
+                        <div class="author_box">
+                            <p class="food_name">Crème Brûlée</p>
+                            <p class="author">By: <a href="link">MarisaG</a></p>
+                        </div>
+                        <div class="like_button_and_counter">
+                            <img class="like_heart" src="heart.png" alt="like heart" onclick="increase_like_three()">
+                            <p id="like_counter_three" class="counter">32</p>
+                        </div>
+                    </div>    
+                </div>
             </div>
         </div>
     </div>
