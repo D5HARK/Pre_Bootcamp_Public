@@ -60,7 +60,7 @@
 }
 
 #search_bar_box{
-    height: 40px;
+    height: auto;
     width: auto;
     display: flex;
 }
@@ -85,7 +85,8 @@
 } 
 
 .sweet_type_box img {
-    height: 150px;
+    height: auto;
+    width: 80%;
     border-radius: 50%;
     background-color: white;
     text-align: center;
