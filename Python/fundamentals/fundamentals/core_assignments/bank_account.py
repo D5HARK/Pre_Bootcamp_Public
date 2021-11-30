@@ -38,7 +38,7 @@ def main():
     first_account = Bank_account(0.01)
     second_account = Bank_account(.04)
 
-    first_account.deposit(110).deposit(50).deposit(25).withdraw(10).yield_interest().print_balances(
+    first_account.deposit(100).deposit(50).deposit(25).withdraw(10).yield_interest().print_balances(
         first_account.balance)
 
     second_account.deposit(200).deposit(500).withdraw(20).withdraw(40).withdraw(60).withdraw(
