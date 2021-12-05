@@ -44,10 +44,10 @@ class Bank_account:
 
 
 def main():
-    first_account = Bank_account(.01)
-    second_account = Bank_account(.04)
-    first_account.deposit(100).deposit(50).deposit(25).withdraw(10).yield_interest().display_account_info()
-    second_account.deposit(200).deposit(500).withdraw(20).withdraw(40).withdraw(60).withdraw(
+    account_one = Bank_account(.01)
+    account_two = Bank_account(.04)
+    account_one.deposit(100).deposit(50).deposit(25).withdraw(10).yield_interest().display_account_info()
+    account_two.deposit(200).deposit(500).withdraw(20).withdraw(40).withdraw(60).withdraw(
         80).yield_interest().display_account_info()
 
 

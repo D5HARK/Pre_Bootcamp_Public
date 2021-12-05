@@ -69,13 +69,13 @@ class Bank_account:
 
 
 def main():
-    bob = User("Bob", "bob@email.com", .01)
-    bertha = User("Bertha", "bertha@email.com", .04)
+    bobert = User("Bob", "bob@email.com", .01)
+    berthaulomew = User("Bertha", "bertha@email.com", .04)
 
-    bob.user_deposit(100).user_deposit(50).user_deposit(25).user_withdraw(
+    bobert.user_deposit(100).user_deposit(50).user_deposit(25).user_withdraw(
         10).user_interest().display_user_info()
 
-    bertha.user_deposit(200).user_deposit(500).user_withdraw(20).user_withdraw(40).user_withdraw(60).user_withdraw(
+    berthaulomew.user_deposit(200).user_deposit(500).user_withdraw(20).user_withdraw(40).user_withdraw(60).user_withdraw(
         80).user_interest().display_user_info()
 
 
