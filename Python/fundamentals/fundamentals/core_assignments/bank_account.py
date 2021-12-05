@@ -1,5 +1,5 @@
 class Bank_account:
-a;slkdhal;jksdasetu8awsed
+
     def __init__(self, int_rate, balance=0):
         if balance > 0:
             self.balance = balance
