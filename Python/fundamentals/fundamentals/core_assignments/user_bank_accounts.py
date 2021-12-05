@@ -1,6 +1,31 @@
 balance_list = []
 
 
+class User:
+    def __init__(self, name, email, user_int_rate, user_account_balance=0):
+        self.name = name
+        self.email = email
+        self.account = Bank_account(user_int_rate, user_account_balance)
+
+    def user_deposit(self, amount):
+        if amount > 0:
+            self.account.deposit(amount)
+        return self
+
+    def user_withdraw(self, amount):
+        self.account.withdraw(amount)
+        return self
+
+    def display_user_info(self):
+        print("Name: ", self.name, "\n", "Email: ", self.email, sep="")
+        self.account.display_account_info()
+        return self
+
+    def user_interest(self):
+        self.account.yield_interest()
+        return self
+
+
 class Bank_account:
 
     def __init__(self, int_rate, balance=0):
@@ -44,11 +69,14 @@ class Bank_account:
 
 
 def main():
-    first_account = Bank_account(.01)
-    second_account = Bank_account(.04)
-    first_account.deposit(100).deposit(50).deposit(25).withdraw(10).yield_interest().display_account_info()
-    second_account.deposit(200).deposit(500).withdraw(20).withdraw(40).withdraw(60).withdraw(
-        80).yield_interest().display_account_info()
+    bob = User("Bob", "bob@email.com", .01)
+    bertha = User("Bertha", "bertha@email.com", .04)
+
+    bob.user_deposit(100).user_deposit(50).user_deposit(25).user_withdraw(
+        10).user_interest().display_user_info()
+
+    bertha.user_deposit(200).user_deposit(500).user_withdraw(20).user_withdraw(40).user_withdraw(60).user_withdraw(
+        80).user_interest().display_user_info()
 
 
 if __name__ == "__main__":
