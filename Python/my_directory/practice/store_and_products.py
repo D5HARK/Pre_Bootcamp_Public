@@ -9,12 +9,14 @@ class Store:
     def add_product(self, product):
         self.product_list.append(product)
 
-    def sell_product(self, upc):
-        for item in self.product_list:
-            if item.u_id == upc:
-                item.print_info()
-                print(item.name, "sold for", item.price)
-                del item
+    def sell_product(self):
+        while len(self.product_list) > 0:
+            upc = int(input("UPC: "))
+            for item in self.product_list:
+                if item.u_id == upc:
+                    item.print_info()
+                    print(item.name, "sold for", item.price)
+                    self.product_list.remove(item)
 
     def inflation(self, percentage):
         for item in self.product_list:
@@ -53,7 +55,7 @@ def main():
     sale_store.clearance(.1)
     for item in sale_store.product_list:
         item.print_info()
-    sale_store.sell_product(int(input("UPC: ")))
+    sale_store.sell_product()
 
 
 if __name__ == "__main__":
