@@ -1,0 +1,9 @@
+h1, p, div {
+    display: flex;
+    justify-content: center;
+}
+input{ 
+    margin: 15px;
+    
+}
+
