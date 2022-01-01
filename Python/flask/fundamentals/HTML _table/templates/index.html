@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <table  width = "10" class = "hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th> 
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in user_dict %}
+            <tr>
+                <td>{{ person["first_name"]}}</td>
+                <td>{{ person["last_name"] }}</td>
+                <td>{{ person["first_name"]}} {{person["last_name"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
