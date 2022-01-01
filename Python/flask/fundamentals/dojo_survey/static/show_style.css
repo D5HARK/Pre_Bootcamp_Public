@@ -1,0 +1,8 @@
+div {
+    margin: 350px;
+    margin-top: 10px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}

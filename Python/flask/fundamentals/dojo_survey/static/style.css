@@ -1,0 +1,12 @@
+form{
+    margin: 350px;
+    margin-top: 10px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+form *{
+    margin: 10px;
+
+}

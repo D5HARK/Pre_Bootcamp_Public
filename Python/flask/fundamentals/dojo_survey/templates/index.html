@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>survey</title>
+</head>
+<body>
+    <form action="/survey", method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name">
+        <label for="location">Dojo Location:</label>
+        <select name="location" placeholder= "location">
+            <option value="" disabled selected>Select Location</option>
+            <option value="chicago">Chicago</option>
+            <option value="online">Online</option>
+            <option value="burbank">Burbank</option>
+            <option value="seattle">Seattle</option>
+        </select>
+        <label for="language">Favorite Language:</label>
+        <select name="language">
+            <option value="" disabled selected>Select Language</option>
+            <option value="javascript">Javascript</option>
+            <option value="html">HTML</option>
+            <option value="python">Python</option>
+        </select>
+        <label for="about"></label>
+        <textarea name="about" cols="5" rows="5"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
