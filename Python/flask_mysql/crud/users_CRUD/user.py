@@ -17,3 +17,10 @@ class User:
         for user in results:
             users.append(cls(user))
         return users
+
+    @classmethod
+    def save(cls, data):
+        query = "INSERT INTO users (first_name, last_name) VALUES (%(first_name)s, %(last_name)s);"
+        result = connecttoMySQL("users_schema").query_db(query, data)
+        return result
+
