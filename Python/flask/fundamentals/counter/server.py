@@ -8,7 +8,7 @@ app.secret_key = "0Wy*p*0YrR{7N.2v#a0Aw$0qJ"
 
 @app.route("/")
 def home():
-    if session["session_number"] >= 0:
+    if session["session_number"] > 0:
         session["session_number"] += 1
     else:
         session["session_number"] = 0
@@ -23,7 +23,7 @@ def count_session():
 @app.route("/destroy_session", methods = ["POST"])
 def reset_session():
     session.clear()
-    session["session_number"] = -1
+    session["session_number"] = 0
     
     return redirect('/')
 

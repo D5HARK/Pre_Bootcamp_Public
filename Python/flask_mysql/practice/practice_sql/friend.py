@@ -12,7 +12,7 @@ class Friend:
     # Now we use class methods to query our database
     @classmethod
     def get_all(cls):
-        query = "SELECT * FROM friends;"
+        query = " SELECT * FROM friends;"
         # make sure to call the connectToMySQL function with the schema you are targeting.
         results = connectToMySQL('first_flask').query_db(query)
         # Create an empty list to append our instances of friends
