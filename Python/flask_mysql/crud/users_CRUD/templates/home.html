@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
     <title>All Users</title>
 </head>
 <body>
-    <h1>All Users</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for person in all_users %}
-            <tr>
-                <td>{{ person["id"] }}</td>
-                <td>{{ person["first_name"] }}</td>
-                <td>{{ person["last_name"] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<h1>All Users</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Created at</th>
+        <th>Updated at</th>
+        <th>actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in all_users %}
+    <tr>
+        <td>{{ person["id"] }}</td>
+        <td>{{ person["first_name"] }}</td>
+        <td>{{ person["last_name"] }}</td>
+        <td>{{ person["created_at"] }}</td>
+        <td>{{ person["updated_at"] }}</td>
+        <td>
+            <a href="/user">Show | </a> <a href="/edit">Edit | </a> <a href="/delete">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </body>
 </html>
