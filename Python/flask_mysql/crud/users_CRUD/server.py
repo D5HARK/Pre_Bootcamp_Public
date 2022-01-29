@@ -37,15 +37,20 @@ def edit_page(user_id):
     return render_template("edit.html", profile=user)
 
 
-@app.route("/edit", methods=["POST"])
-def edit_data():
+@app.route("/edit/<user_id>", methods=["POST"])
+def edit_data(user_id):
     new_data = {
         "new_f_name": request.form["first_name"],
-        "new_l_name": request.form["last_name"]
+        "new_l_name": request.form["last_name"],
+        "id": user_id
     }
     User.edit_user(new_data)
     return redirect("/")
 
+@app.route("/user/delete/<user_id>", methods=["POST"])
+def delete_user(user_id):
+    User.delete(user_id)
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)

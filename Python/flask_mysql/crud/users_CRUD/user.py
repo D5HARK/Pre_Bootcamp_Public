@@ -35,7 +35,13 @@ class User:
 
     @classmethod
     def edit_user(cls, new_data):
-        query = f'UPDATE users SET first_name = {new_data["new_f_name"]}, last_name = {new_data["new_l_name"]} WHERE id = 1;'
-        result = connecttoMySQL("users_schema").query_db(query)
+        query = 'UPDATE users SET first_name = %(new_f_name)s, last_name = %(new_l_name)s WHERE id = %(id)s;'
+        result = connecttoMySQL("users_schema").query_db(query, new_data)
         return result
 
+
+    @classmethod
+    def delete(cls, user_id):
+        query = 'DELETE FROM users WHERE id = %(id)s'
+        result = connecttoMySQL("users_schema").query_db(query, user_id)
+        return result

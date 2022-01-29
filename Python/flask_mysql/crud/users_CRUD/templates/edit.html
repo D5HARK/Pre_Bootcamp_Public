@@ -9,7 +9,7 @@
 </head>
 <body>
     {% for person in profile %}
-    <form action="/edit", method="post">
+    <form action="/edit/{{person.id}}", method="post">
         <label for="first_name">New First Name:</label>
         <input type="text" name="first_name" placeholder="{{person['first_name']}}">
         <label for="last_name">New Last Name: </label>
