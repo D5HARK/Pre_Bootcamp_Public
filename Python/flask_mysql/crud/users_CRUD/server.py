@@ -47,9 +47,10 @@ def edit_data(user_id):
     User.edit_user(new_data)
     return redirect("/")
 
-@app.route("/user/delete/<user_id>", methods=["POST"])
+@app.route("/user/delete/<user_id>")
 def delete_user(user_id):
-    User.delete(user_id)
+    print("hello")
+    User.delete({"id": user_id})
     return redirect("/")
 
 if __name__ == "__main__":
