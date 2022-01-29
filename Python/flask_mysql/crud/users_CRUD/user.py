@@ -24,3 +24,18 @@ class User:
         result = connecttoMySQL("users_schema").query_db(query, data)
         return result
 
+    @classmethod
+    def get_user(cls, user_id):
+        query = f'SELECT * FROM users WHERE id = {user_id};'
+        result = connecttoMySQL('users_schema').query_db(query)
+        profile = []
+        for user in result:
+            profile.append(cls(user))
+        return profile
+
+    @classmethod
+    def edit_user(cls, new_data):
+        query = f'UPDATE users SET first_name = {new_data["new_f_name"]}, last_name = {new_data["new_l_name"]} WHERE id = 1;'
+        result = connecttoMySQL("users_schema").query_db(query)
+        return result
+

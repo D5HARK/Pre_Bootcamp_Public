@@ -9,7 +9,6 @@ app.secret_key = "0V*x4+Imm4(Uy0I+kO0$fR0_"
 @app.route("/")
 def index():
     users = User.get_all()
-    print(users)
     return render_template("home.html", all_users=users)
 
 
@@ -25,6 +24,26 @@ def handle_data():
         "last_name": request.form["last_name"]
     }
     User.save(data)
+    return redirect("/")
+
+@app.route("/user/show/<user_id>")
+def show_user(user_id):
+    user = User.get_user(user_id)
+    return render_template("user.html", profile=user)
+
+@app.route("/user/edit/<user_id>")
+def edit_page(user_id):
+    user = User.get_user(user_id)
+    return render_template("edit.html", profile=user)
+
+
+@app.route("/edit", methods=["POST"])
+def edit_data():
+    new_data = {
+        "new_f_name": request.form["first_name"],
+        "new_l_name": request.form["last_name"]
+    }
+    User.edit_user(new_data)
     return redirect("/")
 
 

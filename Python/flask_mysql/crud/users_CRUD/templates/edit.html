@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title>edit profile</title>
+</head>
+<body>
+    {% for person in profile %}
+    <form action="/edit", method="post">
+        <label for="first_name">New First Name:</label>
+        <input type="text" name="first_name" placeholder="{{person['first_name']}}">
+        <label for="last_name">New Last Name: </label>
+        <input type="text" name="last_name" placeholder="{{person['last_name']}}">
+        <input type="submit" value="Submit">
+    </form>
+    {% endfor %}  
+</body>
+</html>

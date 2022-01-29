@@ -29,7 +29,7 @@
         <td>{{ person["created_at"] }}</td>
         <td>{{ person["updated_at"] }}</td>
         <td>
-            <a href="/user">Show | </a> <a href="/edit">Edit | </a> <a href="/delete">Delete</a>
+            <a href="/user/show/{{ person['id'] }}">Show | </a> <a href="/user/edit/{{ person['id'] }}">Edit | </a> <a href="user/delete/{{ person['id'] }}">Delete</a>
         </td>
     </tr>
     {% endfor %}

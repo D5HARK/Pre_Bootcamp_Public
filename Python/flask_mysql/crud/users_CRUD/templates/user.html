@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title>
+        {% for person in profile %}
+        {{ person["first_name"] }} {{ person["last_name"] }}
+        {% endfor %}
+    </title>
 </head>
 <body>
     <table>
-        <tr></tr>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for person in profile %}
+                <td>{{ person["id"] }}</td>
+                <td>{{ person["first_name"] }}</td>
+                <td>{{ person["last_name"] }}</td>
+                {% endfor %}
+            </tr>    
+        </tbody> 
     </table>
 </body>
 </html>
