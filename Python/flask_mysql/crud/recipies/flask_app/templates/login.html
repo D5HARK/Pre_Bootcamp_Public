@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-evenly;">
+        <form style="background-color: orange; display: flex; flex-direction: column; justify-content: space-evenly; margin: 5%; padding: 3%" action="/create" method="post">
+            <h2>Register</h2>
+            <label for="f_name">First Name:</label>
+            <input type="text" name="f_name">
+            <label for="l_name">Last: Name</label>
+            <input type="text" name="l_name">
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            <label for="s_password">Confirm Password:</label>
+            <input type="password" name="s_password">
+            <input type="submit" value="Submit">
+            {% with messages = get_flashed_messages() %}     
+                {% if messages %}                            
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+        <form style="background-color: orange; display: flex; flex-direction: column; margin: 5%; padding: 3%" action="/login" method="post">
+            <h2>Login</h2>
+            <label for="log_email">Email:</label>
+            <input type="text" name="log_email">
+            <label for="log_password">Password:</label>
+            <input type="password" name="log_password">
+            <input type="submit" value="Submit">
+            {% with messages = get_flashed_messages() %}     
+                {% if messages %}                           
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>
