@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title> {% for item in recipe %}
+            {{ item["name"] }}
+            {% endfor %}
+    </title>
+</head>
+    <div>
+        <h1>Hello User</h1>
+        <a href="/new_recipe">Create</a>
+    </div>
+    <h2>
+        {% for item in recipe %}
+        {{ item["name"] }}
+        {% endfor %} Recipe
+    </h2>
+    <div>
+        {% for item in recipe %}
+        <p>Description: {{item["description"]}}</p>
+        <p>Under 30 Minutes? {{item["time"]}}</p>
+        <p>Instructions:    {{item["instructions"]}}</p>
+        <p>Date Made: {{item["date"]}}</p>
+        {% endfor %}
+    </div>
+<body>
+    
+</body>
+</html>

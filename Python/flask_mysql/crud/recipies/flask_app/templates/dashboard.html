@@ -8,6 +8,32 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>User Dash</h1>
+    <div>
+        <h1>Hello User</h1>
+        <a href="/new_recipe">Create</a>
+    </div>
+        
+     <!--dynamic header and title  -->
+    <table>
+        <thead>
+            <tr>
+                <th>Recipe</th>
+                <th>Less than 30 min?</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food in all_recipes %}
+            <tr>
+                <td>{{ food["name"] }}</td>
+                <td>{{ food["time"] }}</td>
+                <td>
+                    <a href="/recipe/show/{{ food['id'] }}">Show | </a><a href="/recipe/edit/{{ food['id'] }}">Edit | </a><a href="/recipe/delete/{{ food['id'] }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 </body>
 </html>

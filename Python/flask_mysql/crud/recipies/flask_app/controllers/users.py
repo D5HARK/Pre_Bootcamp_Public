@@ -24,7 +24,7 @@ def login():
     session['user_id'] = user_in_db.id
     return redirect("/dashboard")
 
-
+# fix redundant email issue
 @app.route("/create", methods=['POST'])
 def create_user():
     pw_hash = bcrypt.generate_password_hash(request.form["password"])
@@ -40,10 +40,6 @@ def create_user():
         return redirect('/')
 
     user_id = User.save(data)
+    flash("account created, please log in")
     session['user_id'] = user_id
-    return redirect("/dashboard")
-
-
-@app.route("/dashboard")
-def show_dash():
-    return render_template("user_dash.html")
+    return redirect("/")

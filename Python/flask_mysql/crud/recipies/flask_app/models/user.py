@@ -40,13 +40,13 @@ class User:
     @classmethod
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s);"
-        result = connecttoMySQL("recipe_schema").query_db(query, data)
+        result = connecttoMySQL("recipes_schema").query_db(query, data)
         return result
 
     @classmethod
     def get_by_email(cls, data):
         query = "SELECT * FROM users WHERE email = %(email)s;"
-        result = connecttoMySQL("recipe_schema").query_db(query, data)
+        result = connecttoMySQL("recipes_schema").query_db(query, data)
         if len(result) < 1:
             return False
         logged_user = []
