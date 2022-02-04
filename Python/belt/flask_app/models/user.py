@@ -27,6 +27,17 @@ class User:
         return is_valid
 
     @staticmethod
+    def name_length(f_name, l_name):
+        is_valid = True
+        if len(f_name) < 3:
+            flash("first name too short!", "f_name err")
+            is_valid = False
+        if len(l_name) < 3:
+            flash("last name too short!", "l_name err")
+        return is_valid
+
+
+    @staticmethod
     def check_password(password, s_password):
         is_valid = True
         if len(password) < 8:
@@ -40,13 +51,13 @@ class User:
     @classmethod
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s);"
-        result = connecttoMySQL("recipes_schema").query_db(query, data)
+        result = connecttoMySQL("magazines").query_db(query, data)
         return result
 
     @classmethod
     def get_by_email(cls, data):
         query = "SELECT * FROM users WHERE email = %(email)s;"
-        result = connecttoMySQL("recipes_schema").query_db(query, data)
+        result = connecttoMySQL("magazines").query_db(query, data)
         if len(result) < 1:
             return False
         logged_user = []

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title>New Magazine</title>
+</head>
+<body>
+    <div id="heading" style="display: flex; justify-content: space-between;">
+        <h1>Welcome User</h1>
+        <div>
+            <a href="/dashboard">Dashboard |</a>
+            <a href="/new_magazine">Add Magazine |</a>
+            <a href="edit_account">Account </a>
+            <form action="/logout" method="post">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </div>
+    <form action="/create_magazine" method="post">
+        <label for="title">Magazine Title:</label>
+        <input type="text" name="title">
+        <label for="description">Magazine Description:</label>
+        <input type="text" name="description">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

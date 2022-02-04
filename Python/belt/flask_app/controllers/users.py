@@ -24,7 +24,6 @@ def login():
     session['user_id'] = user_in_db.id
     return redirect("/dashboard")
 
-# fix redundant email issue
 @app.route("/create", methods=['POST'])
 def create_user():
     pw_hash = bcrypt.generate_password_hash(request.form["password"])
@@ -38,8 +37,21 @@ def create_user():
         return redirect('/')
     if not User.validate_user(request.form['email']):
         return redirect('/')
+    if not User.name_length(request.form['f_name'], request.form['l_name']):
+        return redirect('/')
 
     user_id = User.save(data)
     flash("account created, please log in")
     session['user_id'] = user_id
     return redirect("/")
+
+@app.route("/user/edit/<user_id>")
+def user_edit_page(user_id):
+    item = User.get_user(user_id)
+    return render_template("edit_account.html", user=item)
+
+@app.route("/logout", methods = ["POST"])
+def end_session():
+    session.clear()
+    return redirect('/')
+

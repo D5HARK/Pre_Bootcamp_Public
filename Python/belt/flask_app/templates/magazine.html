@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='foundation.css') }}">
+    <title> {% for item in magazine %}
+            {{ item["title"] }}
+            {% endfor %}
+    </title>
+</head>
+<div id="heading" style="display: flex; justify-content: space-between;">
+    <h1>Welcome User</h1>
+    <div>
+        <a href="/dashboard">Dashboard |</a>
+        <a href="/new_magazine">Add Magazine |</a>
+        <a href="edit_account">Account </a>
+        <form action="/logout" method="post">
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+</div>
+    {% for item in magazine %}
+    <a href="/magazine/edit/{{item['id']}}">Edit Magazine</a>
+    {%endfor%}
+    <h2>
+        {% for item in magazine %}
+        Title: {{ item["title"] }}
+        {% endfor %}
+    </h2>
+    <div>
+        {% for item in magazine %}
+        <p>Description: {{item["description"]}}</p>
+        {% endfor %}
+    </div>
+<body>
+    
+</body>
+</html>
