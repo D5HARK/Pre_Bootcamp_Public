@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="heading" style="display: flex; justify-content: space-between;">
-        <h1>Welcome User</h1>
+        <h1>Edit Magazine</h1>
         <div>
             <a href="/dashboard">Dashboard |</a>
             <a href="/new_magazine">Add Magazine |</a>
@@ -19,12 +19,14 @@
             </form>
         </div>
     </div>
-    <form action="/magazine/edit/{{magazine.id}}" method="post">
+    {% for item in magazine %}
+    <form action="/edit/magazine/{{item.id}}" method="post">
         <label for="name" >Magazine Title:</label>
         <input type="text" name="name" value="{{magazine['title']}}">
         <label for="description">Magazine Description:</label>
         <input type="text" name="description" value="{{magazine.description}}">
         <input type="submit" value="Update">
     </form>
+    {%endfor%}
 </body>
 </html>

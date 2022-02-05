@@ -22,7 +22,7 @@ def login():
         flash("invalid email/password")
         return redirect('/')
     session['user_id'] = user_in_db.id
-    return redirect("/dashboard")
+    return redirect(f"/dashboard/{user_in_db.id}")
 
 @app.route("/create", methods=['POST'])
 def create_user():
@@ -45,7 +45,7 @@ def create_user():
     session['user_id'] = user_id
     return redirect("/")
 
-@app.route("/user/edit/<user_id>")
+@app.route("/edit_account/<user_id>")
 def user_edit_page(user_id):
     item = User.get_user(user_id)
     return render_template("edit_account.html", user=item)
@@ -54,4 +54,5 @@ def user_edit_page(user_id):
 def end_session():
     session.clear()
     return redirect('/')
+
 

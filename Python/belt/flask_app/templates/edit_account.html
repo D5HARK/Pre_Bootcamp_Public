@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% for person in logged_user %}
+    <title> {% for person in user %}
             {{ person.first_name }} {{ person.last_name }}
-            {% endfor %}
+            
     </title>
 </head>
 <body>
+    <div id="heading" style="display: flex; justify-content: space-between;">
+        <h1>Update User Info</h1>
+        <div>
+            <a href="/dashboard/{{person.id}}">Dashboard |</a>
+            <a href="/new_magazine">Add Magazine </a>
+            <form action="/logout" method="post">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </div>
     
+    <form action="/update_user" style="margin-right: 75%; display: flex; flex-direction: column;justify-content: space-between;">
+        <label for="f_name">First Name:</label>
+        <input type="text" name="f_name" value="{{person.first_name}}">
+        <label for="l_name">Last: Name</label>
+        <input type="text" name="l_name" value="{{person.last_name}}">
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="{{person.email}}">
+        <input type="submit" value="Update" style="margin-right: 60%; margin-top: 5%;">
+    </form>
 </body>
+{% endfor %}
 </html>

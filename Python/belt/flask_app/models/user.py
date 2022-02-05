@@ -64,3 +64,15 @@ class User:
         for user in result:
             logged_user.append(cls(user))
         return cls(result[0])
+
+
+    @classmethod
+    def get_user(cls, id):
+        query = f'SELECT * FROM users WHERE id = {id};'
+        result = connecttoMySQL("magazines").query_db(query)
+        user = []
+        for item in result:
+            user.append(cls(item))
+        return user
+
+    
